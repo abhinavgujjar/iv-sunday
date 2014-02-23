@@ -1,6 +1,8 @@
 helloWorldApp.controller('worldController', function($scope){
 	$scope.greeting = "Good Afternoon, Sunday Batch !";
 
+	$scope.bePolite = true;
+
 	$scope.yell = function(what){
 		alert('AAAA! - ' + $scope.greeting);
 	}
@@ -8,19 +10,23 @@ helloWorldApp.controller('worldController', function($scope){
 	$scope.hotels = [
 	{
 		name : 'Radisson',
-		location : 'Sector 18'
+		location : 'Sector 18',
+		image: 'img/radisson.jpg'
 	},
 	{
 		name : 'Hilton',
-		location : 'New Delhi'
+		location : 'New Delhi',
+		image: 'img/taj.jpg'
 	},
 	{
 		name : 'Hyatt',
-		location : 'New Delhi'
+		location : 'New Delhi',
+		image: 'img/hyatt.jpg'
 	},
 	{
 		name : 'Mariott',
-		location : 'Gurgaon'
+		location : 'Gurgaon',
+		image: 'img/royalorchid.jpg'
 	}
 	];
 });
