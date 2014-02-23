@@ -4,12 +4,30 @@
 <body>
 	<div ng-controller="greetingController">
 		<h2 ng-bind="greeting"></h2>
-
+		<h2 ng-bind="yawning"></h2>
 		<h3>{{1 + 3 }}</h3>
 		<h3 ng-bind="">{{ 'good' + ' ' + 'morning' }}</h3>
 
 		<input value="Say Something" type="button" ng-click="yell('nothing')"/>
+
+		<h2 ng-bind="greeting"></h2>
+
+		<ul>
+			<li ng-repeat="hotel in hotels">{{hotel.name}}</li>
+		</ul>
+
+		<div ng-repeat='hotel in hotels'>
+		<div><strong>{{hotel.name}}</strong>
+			</div>
+			<div>{{hotel.location}}
+			</div>
+			<hr/>
+		</div>
+
+
 	</div>
+
+	
 	<script src="angular.js"></script>
 	<script type="text/javascript">
 		function greetingController($scope){
@@ -25,6 +43,25 @@
 					alert('AAAA! - ' + $scope.greeting);
 				}
 			}
+
+			$scope.hotels = [
+			{
+				name : 'Radisson',
+				location : 'Sector 18'
+			},
+			{
+				name : 'Hilton',
+				location : 'New Delhi'
+			},
+			{
+				name : 'Hyatt',
+				location : 'New Delhi'
+			},
+			{
+				name : 'Mariott',
+				location : 'Gurgaon'
+			}
+			];
 		}
 	</script>
 </body>
