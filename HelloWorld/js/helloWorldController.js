@@ -3,8 +3,8 @@ helloWorldApp.controller('worldController', function($scope){
 
 	$scope.bePolite = true;
 
-	$scope.yell = function(what){
-		alert('AAAA! - ' + $scope.greeting);
+	$scope.yell = function(){
+		alert('AAAA! - ' + $scope.namaste);
 	}
 
 	$scope.hotels = [

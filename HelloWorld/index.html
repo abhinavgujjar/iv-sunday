@@ -1,34 +1,32 @@
 <html ng-app="helloApp">
 <head>
 </head>
-<style>
-	.fancy {
-		background-color: pink;
-	}
-	.superfancy {
-		background-color: lightgrey;
-	}
-</style>
 <body>
 	<div ng-controller="worldController">
-	<div ng-hide="bePolite">
-			<h2 ng-bind="greeting"></h2>
+		<h1 ng-bind="namaste"></h1>
+	<div ng-hide="bePolite" >
+			<h2 ng-bind="namaste"></h2>
 			<h3 >{{ 'good' + ' ' + 'morning' }}</h3>
 		</div>
+
+		<div><input type="text" ng-model="namaste" style="width:300px; height:50px" /></div>
+
 		<input value="Say Something" type="button" ng-click="yell('nothing')"/>
 
-		<h2 ng-bind="greeting"></h2>
+		<h2 ng-bind="namaste"></h2>
+
+		<h3 >{{model}}</h3>
 
 		<div ng-repeat='hotel in hotels' ng-class-odd="'superfancy'" ng-class-even="'fancy'">
+			
 			<div>
-				<img ng-src="{{hotel.image}}" />
+			<span>
+				<img style="width=100px; height:50px" ng-src="{{hotel.image}}" />
+			</span><strong>{{hotel.name}} - {{hotel.location}}</strong>
 			</div>
-			<div><strong>{{hotel.name}}</strong>
-			</div>
-			<div>{{hotel.location}}
+			<div>
 			</div>
 			<hr/>
-			<br/>
 			<br/>
 		</div>
 
