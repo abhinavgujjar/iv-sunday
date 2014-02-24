@@ -1,35 +1,30 @@
-bookMyHotelApp.factory('hotelsProvider', function(){
+bookMyHotelApp.factory('hotelsProvider', function($http, $q){
 	return {
-		hotelsList : [
+		getHotels: function(successcb)
 		{
-			name : 'Radisson',
-			location : 'Sector 18',
-			image: 'img/radisson.jpg',
-			rating: 8,
-			dailyRate : 6000
+			$http({method:'GET', url:'/data/hotel'})
+			.success( function(data){
+				successcb(data);
+				alert('Yes! Successful');
+			})
+			.error( function (){
+				alert('oh no :(');
+			});
 		},
+		getHotels_d: function()
 		{
-			name : 'Hilton',
-			location : 'New Delhi',
-			image: 'img/taj.jpg',
-			rating: 6,
-			dailyRate : 500
-		},
-		{
-			name : 'Hyatt',
-			location : 'New Delhi',
-			image: 'img/hyatt.jpg',
-			rating: 9,
-			dailyRate : 200
-		},
-		{
-			name : 'Mariott',
-			location : 'Gurgaon',
-			image: 'img/royalorchid.jpg',
-			rating: 3,
-			dailyRate : 600
+			var deferred = $q.defer();
+
+			$http({method:'GET', url:'/data/hotel'})
+			.success( function(data){
+				deferred.resolve(data);
+			})
+			.error( function (){
+				deferred.reject();
+			});
+
+			return deferred.promise;
 		}
-		]
 	};
 
 });

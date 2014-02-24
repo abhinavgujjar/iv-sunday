@@ -1,0 +1,13 @@
+{
+	"id" :	2,
+	"name": "Hyatt Regency",
+	"location": "Delhi",
+	"rating": 8,
+	"dailYrate": 1000,
+	"image": "img/hyatt.jpg",
+	"reviews" : [
+	{"author" : "Abhinav", "rating" : 5, "comment" : "meh ... it was allright"},
+	{"author" : "Chaitandeep", "rating" : 8, "comment" : "Cool place"},
+	{"author" : "Rajat", "rating" : 3, "comment" : "will never go again"}
+	]
+}

@@ -9,9 +9,15 @@ bookMyHotelApp.controller('hotelsController', function($scope, hotelsProvider, c
 	}
 
 
-	$scope.hotels = hotelsProvider.hotelsList;
+	var promise = hotelsProvider.getHotels_d();
 
-	angular.forEach($scope.hotels, function(hotel, key){
-		hotel.weightedScore = calculator.calculate(hotel);
+	promise.then(function(hotels){
+		$scope.hotels = hotels;
+
+		angular.forEach($scope.hotels, function(hotel, key){
+			hotel.weightedScore = calculator.calculate(hotel);
+		});
+
 	});
+
 });

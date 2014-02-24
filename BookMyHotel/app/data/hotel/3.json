@@ -1,0 +1,9 @@
+{
+	"id" : 3,
+	"name": "Taj Residency",
+	"location": "New Delhi",
+	"rating" : 3,
+	"dailYrate": 200,
+	"image": "img/taj.jpg",
+	"amenities": ["Spa", "Gym", "Jacuzzi"]
+}
