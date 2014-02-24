@@ -1,0 +1,42 @@
+<div class="container" >
+	<div >
+		<form class="form-horizontal" role="form" name="newHotelForm">
+			<div class="form-group">
+				<label for="Name" class="col-sm-2 control-label" >Name</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="name" placeholder="hotel name..." ng-model="hotel.name" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="location" class="col-sm-2 control-label">Location</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="location" ng-model="hotel.location"placeholder="city / area" >
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="image" class="col-sm-2 control-label">Image</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="image" ng-model="hotel.image" placeholder="image url">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="rating" class="col-sm-2 control-label">Rating</label>
+				<div class="col-sm-2">
+					<input type="number" class="form-control" id="rating" placeholder="rating" ng-model="hotel.rating">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="rating" class="col-sm-2 control-label">Daily Rate</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="dailyRate" placeholder="price per night" ng-model="hotel.dailyRate">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-5">
+					<button type="submit" ng-click="" class="btn btn-default">Sign in</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+</div>
