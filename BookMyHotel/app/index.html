@@ -45,7 +45,10 @@
         <div class="row">
           <div class="col-md-3"><strong>{{hotel.name | uppercase}}</strong></div>
           <div class="col-md-3">{{hotel.location | lowercase}}</div>
-          <div class="col-md-3"><h3>{{hotel.dailyRate | toRupees | toCategory | uppercase}}</h3></div>
+          <div class="col-md-3">
+            <div><h3>{{hotel.dailyRate | toRupees | toCategory | uppercase}}</h3></div>
+            <div><h3>{{hotel.weightedScore}}</h3></div>
+            </div>
         </div>
       </div>
     </div>
@@ -58,6 +61,7 @@
 <script src="js/services.js"></script>
 <script src="js/controllers/hotelsController.js"></script>
 <script src="js/services/hotelDataProvider.js"></script>
+<script src="js/services/scoreCalculator.js"></script>
 <script src="js/filters.js"></script>
 <script src="js/directives.js"></script>
 </body>
