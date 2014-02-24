@@ -3,6 +3,6 @@
 	"name": "Royal Orchid",
 	"location": "Bangalore",
 	"rating": 2,
-	"dailYrate": 5000,
+	"dailyRate": 5000,
 	"image": "img/royalorchid.jpg"
 }

@@ -3,7 +3,7 @@
 	"name": "Taj Residency",
 	"location": "New Delhi",
 	"rating" : 3,
-	"dailYrate": 200,
+	"dailyRate": 200,
 	"image": "img/taj.jpg",
 	"amenities": ["Spa", "Gym", "Jacuzzi"]
 }

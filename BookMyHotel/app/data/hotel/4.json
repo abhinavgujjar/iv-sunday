@@ -3,6 +3,6 @@
 	"name": "Country Inn",
 	"location": "Dubai",
 	"rating": 7,
-	"dailYrate": 700,
+	"dailyRate": 700,
 	"image": "img/countryinn.jpg"
 }
