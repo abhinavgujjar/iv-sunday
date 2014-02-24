@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" ng-app="bookMyHotel">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">BookMyHotel</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Hotels</a></li>
+          <li><a href="#">New Hotel</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="container" ng-controller="hotelsController">
+    <h3 ><input type="text" ng-model="searchTerm" style="width:350px; height:30px" /></h3>
+
+
+    <div class="row well" ng-repeat='hotel in hotels | filter: searchTerm | orderBy: "-rating"' >
+      <div class="col-md-1">
+        <div><button ng-click="upVote(hotel)" type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-chevron-up"></span>
+</button></div>
+        <h3><div class="label label-info">{{hotel.rating}}</div></h3>
+        <div><button ng-click="downVote(hotel)" type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-chevron-down"></span>
+</button></div>
+
+      </div>
+      <div class="col-md-2"><img style="width=100px; height:50px" ng-src="{{hotel.image}}" />
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-3"><strong>{{hotel.name | uppercase}}</strong></div>
+          <div class="col-md-3">{{hotel.location | lowercase}}</div>
+          <div class="col-md-3"><h3>{{hotel.dailyRate | toRupees | toCategory | uppercase}}</h3></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers/hotelsController.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+</body>
+</html>

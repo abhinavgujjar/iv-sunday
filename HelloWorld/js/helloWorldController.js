@@ -13,7 +13,7 @@ helloWorldApp.controller('worldController', function($scope){
 		location : 'Sector 18',
 		image: 'img/radisson.jpg',
 		rating: 8,
-		dailyRate : 350
+		dailyRate : 6000
 	},
 	{
 		name : 'Hilton',
